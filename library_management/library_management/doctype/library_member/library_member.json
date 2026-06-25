@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2026-06-23 13:10:03.541331",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "identity_section",
+  "full_name",
+  "member_id",
+  "member_type",
+  "gender",
+  "date_of_birth",
+  "contact_section",
+  "mobile_number",
+  "email",
+  "address",
+  "membership_section",
+  "membership_start_date",
+  "membership_expire_date",
+  "membership_status",
+  "accounting_link_section",
+  "customer",
+  "summary_section",
+  "books_currently_issued",
+  "outstanding_fine",
+  "issue_history_section",
+  "issue_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "member_id",
+   "fieldtype": "Data",
+   "label": "Member ID"
+  },
+  {
+   "fieldname": "member_type",
+   "fieldtype": "Link",
+   "label": "Member Type",
+   "options": "Member Type"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther\nPrefer not to say"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "membership_section",
+   "fieldtype": "Section Break",
+   "label": "Membership"
+  },
+  {
+   "fieldname": "membership_start_date",
+   "fieldtype": "Date",
+   "label": "Membership start date"
+  },
+  {
+   "fieldname": "membership_expire_date",
+   "fieldtype": "Date",
+   "label": "Membership expire date"
+  },
+  {
+   "fieldname": "membership_status",
+   "fieldtype": "Select",
+   "label": "Membership status",
+   "options": "\nActive\nExpired\nSuspended"
+  },
+  {
+   "fieldname": "accounting_link_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Link"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Custom DocPerm"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "books_currently_issued",
+   "fieldtype": "Int",
+   "label": "Books currently issued"
+  },
+  {
+   "fieldname": "outstanding_fine",
+   "fieldtype": "Currency",
+   "label": "Outstanding Fine"
+  },
+  {
+   "fieldname": "issue_history_section",
+   "fieldtype": "Section Break",
+   "label": "Issue History"
+  },
+  {
+   "fieldname": "issue_history",
+   "fieldtype": "HTML",
+   "label": "Issue History",
+   "options": "<div id=\"issue-history-placeholder\">Load the member to see issue history.</div>"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-25 17:01:25.657283",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Member",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

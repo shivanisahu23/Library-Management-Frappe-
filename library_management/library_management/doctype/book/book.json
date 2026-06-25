@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:book_title",
+ "creation": "2026-06-23 12:57:02.873980",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "book_title",
+  "isbn",
+  "category",
+  "publisher",
+  "publication_year",
+  "edition",
+  "language",
+  "description__synopsis",
+  "section_break_acxj",
+  "authors",
+  "section_break_fuxy",
+  "rack__shelf_location",
+  "total_copies_owned",
+  "available_copies",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "book_title",
+   "fieldtype": "Data",
+   "label": "Book title",
+   "unique": 1
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Book Category"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "publication_year",
+   "fieldtype": "Int",
+   "label": "Publication year"
+  },
+  {
+   "fieldname": "edition",
+   "fieldtype": "Data",
+   "label": "Edition"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language"
+  },
+  {
+   "fieldname": "description__synopsis",
+   "fieldtype": "Text Editor",
+   "label": "Description / synopsis"
+  },
+  {
+   "fieldname": "section_break_fuxy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rack__shelf_location",
+   "fieldtype": "Data",
+   "label": "Rack / Shelf Location"
+  },
+  {
+   "fieldname": "total_copies_owned",
+   "fieldtype": "Int",
+   "label": "Total copies owned"
+  },
+  {
+   "fieldname": "available_copies",
+   "fieldtype": "Int",
+   "label": "Available copies"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nAvailable\nFully Issued\nDiscontinued"
+  },
+  {
+   "fieldname": "section_break_acxj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "authors",
+   "fieldtype": "Table",
+   "label": "Authors",
+   "options": "Book Author Item"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-25 10:24:49.830670",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Book",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

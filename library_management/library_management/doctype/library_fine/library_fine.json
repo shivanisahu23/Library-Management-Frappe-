@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LIB-FIN-.YYYY.-.####",
+ "creation": "2026-06-23 15:49:42.845249",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "library_member",
+  "customer",
+  "book_issue_reference",
+  "book",
+  "fine_raised_on",
+  "days_overdue",
+  "fine_per_day",
+  "fine_amount",
+  "amount_paid",
+  "outstanding",
+  "status",
+  "sales_invoice",
+  "waiver_reason"
+ ],
+ "fields": [
+  {
+   "default": "LIB-FIN-",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming series",
+   "options": "LIB-FIN-"
+  },
+  {
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "label": "Library Member",
+   "options": "Library Member"
+  },
+  {
+   "fetch_from": "library_member.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "book_issue_reference",
+   "fieldtype": "Link",
+   "label": "Book Issue Reference",
+   "options": "Book Issue"
+  },
+  {
+   "fieldname": "book",
+   "fieldtype": "Link",
+   "label": "Book",
+   "options": "Book"
+  },
+  {
+   "fieldname": "fine_raised_on",
+   "fieldtype": "Date",
+   "label": "Fine raised on"
+  },
+  {
+   "fieldname": "days_overdue",
+   "fieldtype": "Int",
+   "label": "Days overdue"
+  },
+  {
+   "fieldname": "fine_per_day",
+   "fieldtype": "Currency",
+   "label": "Fine per day"
+  },
+  {
+   "fieldname": "fine_amount",
+   "fieldtype": "Currency",
+   "label": "Fine amount"
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Amount Paid"
+  },
+  {
+   "fieldname": "outstanding",
+   "fieldtype": "Currency",
+   "label": "Outstanding"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nUnpaid\nPartially Paid\nPaid\nWalved"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "waiver_reason",
+   "fieldtype": "Small Text",
+   "label": "Waiver reason"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-25 11:55:23.446786",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Fine",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

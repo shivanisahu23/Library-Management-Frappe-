@@ -137,34 +137,63 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Book": {
+        "validate": "library_management.library_management.doctype.book.book.Book.validate",
+        "before_insert": "library_management.library_management.doctype.book.book.Book.before_insert",
+    },
+    "Library Member": {
+        "before_insert": "library_management.library_management.doctype.library_member.library_member.LibraryMember.before_insert",
+        "validate": "library_management.library_management.doctype.library_member.library_member.LibraryMember.validate",
+        "after_insert": "library_management.library_management.doctype.library_member.library_member.LibraryMember.after_insert",
+        "on_update": "library_management.library_management.doctype.library_member.library_member.LibraryMember.on_update",
+    },
+    "Book Issue": {
+        "validate": "library_management.library_management.doctype.book_issue.book_issue.BookIssue.validate",
+        "on_submit": "library_management.library_management.doctype.book_issue.book_issue.BookIssue.on_submit",
+        "on_cancel": "library_management.library_management.doctype.book_issue.book_issue.BookIssue.on_cancel",
+    },
+    "Book Return": {
+        "validate": "library_management.library_management.doctype.book_return.book_return.BookReturn.validate",
+        "on_submit": "library_management.library_management.doctype.book_return.book_return.BookReturn.on_submit",
+        "on_cancel": "library_management.library_management.doctype.book_return.book_return.BookReturn.on_cancel",
+    },
+    "Library Fine": {
+        "validate": "library_management.library_management.doctype.library_fine.library_fine.LibraryFine.validate",
+        "on_submit": "library_management.library_management.doctype.library_fine.library_fine.LibraryFine.on_submit",
+        "on_cancel": "library_management.library_management.doctype.library_fine.library_fine.LibraryFine.on_cancel",
+    },
+    "Fine Payment": {
+        "validate": "library_management.library_management.doctype.fine_payment.fine_payment.FinePayment.validate",
+        "on_submit": "library_management.library_management.doctype.fine_payment.fine_payment.FinePayment.on_submit",
+        "on_cancel": "library_management.library_management.doctype.fine_payment.fine_payment.FinePayment.on_cancel",
+    },
+}
+
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"library_management.tasks.all"
-# 	],
-# 	"daily": [
-# 		"library_management.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"library_management.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"library_management.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"library_management.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    "daily": [
+        "library_management.library_management.scheduler.mark_overdue_issues",
+        "library_management.library_management.scheduler.send_overdue_emails",
+        "library_management.library_management.scheduler.expire_memberships",
+    ]
+
+	# "all": [
+	# 	"library_management.tasks.all"
+	# ],
+	# "hourly": [
+	# 	"library_management.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"library_management.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"library_management.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------

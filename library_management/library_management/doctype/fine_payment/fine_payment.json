@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LIB-PAY-.YYYY.-.####",
+ "creation": "2026-06-23 15:55:34.457590",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "library_fine",
+  "library_member",
+  "payment_date",
+  "payment_mode",
+  "reference__transaction_no",
+  "recieved_by",
+  "payment_entry",
+  "remarks",
+  "amount_paid"
+ ],
+ "fields": [
+  {
+   "default": "LIB-PAY-",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming Series",
+   "options": "LIB-PAY-"
+  },
+  {
+   "fieldname": "library_fine",
+   "fieldtype": "Link",
+   "label": "Library fine",
+   "options": "Library Fine"
+  },
+  {
+   "fetch_from": "library_fine.library_member",
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "label": "Library Member",
+   "options": "Library Member"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment date"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "\nCash\nUPI\nCard\nBank Transfer"
+  },
+  {
+   "fieldname": "reference__transaction_no",
+   "fieldtype": "Data",
+   "label": "Reference / transaction no."
+  },
+  {
+   "fieldname": "recieved_by",
+   "fieldtype": "Link",
+   "label": "Recieved by",
+   "options": "User"
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount Paid",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-25 12:06:38.044295",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Fine Payment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

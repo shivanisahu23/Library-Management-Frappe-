@@ -1,0 +1,12 @@
+{
+  "doctype": "Number Card",
+  "name": "Books Currently Issued",
+  "label": "Books Currently Issued",
+  "document_type": "Book Issue",
+  "function": "Count",
+  "filters_json": "[{\"fieldname\":\"status\",\"operator\":\"=\",\"value\":\"Issues\"}]",
+  "is_standard": 1,
+  "module": "Library Management",
+  "show_percentage_stats": 0,
+  "color": "#ff9f43"
+}

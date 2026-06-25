@@ -1,0 +1,15 @@
+{
+  "doctype": "Dashboard",
+  "name": "Library Management Dashboard",
+  "dashboard_name": "Library Management Dashboard",
+  "module": "Library Management",
+  "is_standard": 1,
+  "cards": [
+    {"card": "Total Books"},
+    {"card": "Active Members"},
+    {"card": "Books Currently Issued"},
+    {"card": "Overdue Books"},
+    {"card": "Outstanding Fines"}
+  ],
+  "charts": []
+}

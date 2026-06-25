@@ -1,0 +1,12 @@
+{
+  "doctype": "Number Card",
+  "name": "Active Members",
+  "label": "Active Members",
+  "document_type": "Library Member",
+  "function": "Count",
+  "filters_json": "[{\"fieldname\":\"membership_status\",\"operator\":\"=\",\"value\":\"Active\"}]",
+  "is_standard": 1,
+  "module": "Library Management",
+  "show_percentage_stats": 0,
+  "color": "#29cd42"
+}
