@@ -1,7 +1,6 @@
 
 # Library Management System - Frappe/ERPNext App
 
-A custom Frappe app built for Klaimify Pvt. Ltd. as part of the ERPNext Developer Assessment.
 
 ## Overview
 Digitizes and automates all core library operations with full ERPNext accounting integration.
